@@ -1,0 +1,51 @@
+<app-toolbar [title]="title"></app-toolbar>
+  <div class="container col-md-6 mt-4" *ngIf="user">
+    <mat-card class="user-card mb-2 ">
+      <mat-card-content>
+        <div class="row g-0 justify-content-around">
+          <div class="col-md-4">
+            <img [src]="user.picture" class="w-100 border img-fluid rounded-start" alt="Imagem">
+          </div>
+          <div class="col-6 d-flex">
+            <div class="card-body">
+              <h3 class="card-title text-uppercase text-center fw-bold">Detalhes</h3>
+              <div class="col-12 d-flex text-start mt-5">
+                <div class="col-6">
+                  <label for="firstName" class="fw-bold">Nome: </label>
+                  <div>
+                    {{user.firstName}}
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label for="lastName" class="fw-bold">Sobrenome: </label>
+                  <div>
+                    {{user.lastName}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex text-start mt-5">
+                <div class="col-6">
+                  <label for="title" class="fw-bold">Titulo: </label>
+                  <div>
+                    {{user.title}}
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label for="id" class="fw-bold">Id: </label>
+                  <div>
+                    {{user.id}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="container col-md-6 d-flex justify-content-end">
+    <button mat-raised-button color="primary" routerLink="/users">
+      voltar
+    </button>
+  </div>
+ 

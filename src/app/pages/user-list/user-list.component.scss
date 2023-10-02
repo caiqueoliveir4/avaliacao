@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+  }
+
+  th.mat-column-actions {
+    text-align: center;
+  }
+  td.mat-column-actions {
+    width: 140px;
+    text-align: center;
+  }
+  
+  td.mat-column-details,
+   .mat-column-title,
+   .mat-column-picture {
+    width: 20px;
+  }
+  td.mat-column-lastName {
+    width: 260px;
+  }
+  td.mat-column-firstName {
+    width: 180px;
+  }
+ 
+
+  

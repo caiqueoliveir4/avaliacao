@@ -1,0 +1,7 @@
+<app-toolbar [title]="title"></app-toolbar>
+<app-form *ngIf="userToEdit"
+  [formTitle]="formTitle"
+  [submitButtonLabel]="submitButtonLabel"
+  [user]="userToEdit"
+  (formSubmit)="updateUser($event)"
+></app-form>

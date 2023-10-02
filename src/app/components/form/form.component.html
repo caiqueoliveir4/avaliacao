@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center mt-5">
+    <mat-card class="col-md-6">
+      <mat-card-header class="justify-content-center">
+        <h4 class="fw-bold">{{ formTitle }}</h4>
+      </mat-card-header>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <mat-card-content class="d-flex flex-column">
+          <div class="mb-3" claappearance="fill">
+            <label>Nome:</label>
+            <input type="text" class="form-control" formControlName="firstName" maxlength="50" minlength="2" required>
+          </div>
+          <div class="mb-3" appearance="fill">
+            <label>Sobrenome:</label>
+            <input type="text" class="form-control" formControlName="lastName" maxlength="50" minlength="2" required>
+          </div>
+          <div class="mb-3" appearance="fill">
+            <label>E-mail:</label>
+            <input type="text" class="form-control" formControlName="email" required>
+          </div>
+          <div class="mb-3" appearance="fill">
+            <label>URL da Imagem:</label>
+            <input type="text" class="form-control" formControlName="picture">
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">{{submitButtonLabel}}</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
